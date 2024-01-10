@@ -15,7 +15,7 @@ through the PinePG Edge platform.
 
 **Steps to Integrate**
 
-1.  First, download the extension files from the download link. This
+1.  Download the extension files from the download link. This
     > will typically be in the form of a zip file.
 
 2.  The Plugin can be installed in two ways:
