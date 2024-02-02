@@ -807,8 +807,8 @@ function verify($params,$PayEnvironment)
         plugin_log(__LINE__. ': Enquiry Api response:' . $response);
 
         $response = json_decode($response); 
-        if (isset($response->ppc_TxnResponseMessage) && $response->ppc_TxnResponseMessage == "SUCCESS" && isset($response->ppc_TxnResponseCode) && $response->ppc_TxnResponseCode == 1 && $params['ppc_Amount'] == $response->ppc_Amount) {
-            return true;
+        if (isset($response->ppc_Parent_TxnStatus) && $response->ppc_Parent_TxnStatus == "4" && isset($response->ppc_ParentTxnResponseCode) && $response->ppc_ParentTxnResponseCode == 1 && $params['ppc_Amount'] == $response->ppc_Amount) {
+	    return true;
         }
 
         return false;
